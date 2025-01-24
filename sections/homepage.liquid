@@ -1,5 +1,26 @@
 <div class="homepage">
   <img src="{{ 'weeklyhow-logo.png' | asset_img_url: 'large' }}" class="logo" alt="text" height="100" width="100">
-  <h1 class="bg-red-200">Welcome to Shopify Theme Development course!</h1>
+  <h1 class="bg-red-200">{{ section.settings.title }}</h1>
+  <h2>{{ section.settings.content }}</h2>
   <p>{% render 'homepage-text' %}</p>
 </div>
+
+{% schema %}
+{
+  "name": "Homepage",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Welcome to Shopify Theme Development course!"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+      "default": "<p>Learn how to build Shopify themes with Liquid, HTML, CSS, and JavaScript.</p>"
+    }
+  ]
+}
+{% endschema %}

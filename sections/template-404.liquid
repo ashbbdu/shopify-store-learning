@@ -1,0 +1,26 @@
+<div>
+<div>this is test 404 file</div>
+<h1>{{ section.settings.title }}</h1>
+<h2>{{ section.settings.sub_title }}</h2>
+</div>
+{% schema %}
+{
+  "name": "404 Template",
+  "tag": "section",
+  "class": "flex items-center justify-center h-screen py-7 text-center",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "404 heading title",
+      "default": "404"
+    },
+    {
+      "type": "text",
+      "id": "sub_title",
+      "label": "404 heading sub title",
+      "default": "The page you are looking for is not found."
+    }
+  ]
+}
+{% endschema %}

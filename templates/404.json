@@ -1,11 +1,11 @@
 {
     "name" : "404 Template",
-    "layout" : "custom-theme",
+    // "layout" : "custom-theme", //will select the default theme.liquid layout
     "wrapper" : "div#404_template.custom-class[custom-attr='custom-attr']",
     "sections" : {
-        "template-404" : {
-            "type" : "section-404"
+        "template" : {
+            "type" : "template-404"
         }
     },
-    "order" : ["template-404"]
+    "order" : ["template"]
 }
