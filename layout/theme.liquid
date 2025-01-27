@@ -10,13 +10,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     {{ content_for_header }}
     <!-- Header hook for plugins -->
-    {{ 'application.css' | asset_url | stylesheet_tag }}
+    {% comment %} {{ 'application.css' | asset_url | stylesheet_tag }} {% endcomment %}
     {{ 'application.js' | asset_url | script_tag }}
-
+    <script defer src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
 
   </head>
-  <body class="bg-red-300">
+  <body>
     <section>
       {% section 'header' %}
     </section>

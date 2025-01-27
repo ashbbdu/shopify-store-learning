@@ -1,13 +1,24 @@
-<div>
-<div>this is test 404 file</div>
-<h1>{{ section.settings.title }}</h1>
-<h2>{{ section.settings.sub_title }}</h2>
+{% comment %} <div>this is test 404 file</div> {% endcomment %}
+<div class="flex flex-col items-center justify-center py-7 text-center h-96  gap-3">
+  <div>
+    <h1 class="text-xl">{{ section.settings.title }}</h1>
+    <h2 class="font-bold text-2xl">{{ section.settings.sub_title }}</h2>
+  </div>
+  <div>
+    <button
+      type="button"
+      class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+    >
+      <a href=`{{ section.settings.button_link }}`>{{ section.settings.button_text }}</a>
+    </button>
+  </div>
 </div>
+
 {% schema %}
 {
   "name": "404 Template",
   "tag": "section",
-  "class": "flex items-center justify-center h-screen py-7 text-center",
+  "class": "h-96",
   "settings": [
     {
       "type": "text",
@@ -20,6 +31,18 @@
       "id": "sub_title",
       "label": "404 heading sub title",
       "default": "The page you are looking for is not found."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Go back to Home Page"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link",
+      "default": "/"
     }
   ]
 }

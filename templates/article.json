@@ -1,0 +1,59 @@
+{
+  "name": "Article Template",
+  "sections": {
+    "template": {
+      "type": "template-article",
+     // Creating the blocks for the article template
+      "blocks": {
+        "title": {
+          "type": "article_title"
+        },
+        "author": {
+          "type": "article_author"
+        },
+        "published_date": {
+          "type": "article_published_date"
+        },
+        "article_image" : {
+          "type": "article_image"
+        },
+        "content": {
+          "type": "article_content"
+        }
+      },
+      "block_order": ["title" , "author", "published_date", "image", "content"]
+    },
+
+  },
+  "order": ["template"]
+}
+
+
+// {
+//     "name": "Article Template",
+//     "sections": {
+//       "template": {
+//         "type": "template-article",
+//         // "blocks": {
+//         //   "title": {
+//         //     "type": "article_title"
+//         //   },
+//         //   "author": {
+//         //     "type": "article_author"
+//         //   },
+//         //   "published_date": {
+//         //     "type": "article_published_date"
+//         //   },
+//         //   "image": {
+//         //     "type": "article_image"
+//         //   },
+//         //   "content": {
+//         //     "type": "article_content"
+//         //   }
+//         // },
+//         // "block_order": ["title", "author", "published_date", "image", "content"]
+//       }
+//     },
+//     "order": ["template"]
+//   }
+  
