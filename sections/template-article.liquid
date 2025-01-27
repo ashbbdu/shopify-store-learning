@@ -69,6 +69,8 @@
                 <h2 class="text-2xl font-medium">Comments</h2>
                 <div class="mt-4">
                     {% for comment in article.comments %}
+
+                        {{ comment }}
                         <div class="bg-gray-100 p-4 rounded-lg my-2">
                             <p class="text-sm font-medium">{{ comment.author.name }}</p>
                             <p class="text-sm">{{ comment.content }}</p>
